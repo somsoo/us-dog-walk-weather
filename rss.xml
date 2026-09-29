@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</title>
+  <title>Dog Walk Weather Checker | Too Hot or Cold to Walk?</title>
   <link>https://us-dog-walk-weather.enjoy-onepage.com/</link>
-  <description>Check if outdoor temperature, pavement heat, and air quality are safe for your dog</description>
+  <description>Check if it is safe to walk your dog: heat index, wind chill, hot pavement estimate and air quality, adjusted for your dog&#x27;s size, coat and health.</description>
   <language>en-us</language>
   <atom:link href="https://us-dog-walk-weather.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 29 Sep 2026 06:02:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 29 Sep 2026 17:41:34 +0000</lastBuildDate>
   <item>
-    <title>Disclaimer | Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</title>
+    <title>Disclaimer | Dog Walk Weather Checker</title>
     <link>https://us-dog-walk-weather.enjoy-onepage.com/disclaimer.html</link>
     <guid isPermaLink="true">https://us-dog-walk-weather.enjoy-onepage.com/disclaimer.html</guid>
-    <description>Disclaimer | Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</description>
-    <pubDate>Sun, 20 Sep 2026 22:08:43 +0900</pubDate>
+    <description>Disclaimer for the Dog Walk Weather Checker.</description>
+    <pubDate>Tue, 29 Sep 2026 17:41:34 +0000</pubDate>
   </item>
   <item>
-    <title>Terms of Service | Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</title>
-    <link>https://us-dog-walk-weather.enjoy-onepage.com/terms.html</link>
-    <guid isPermaLink="true">https://us-dog-walk-weather.enjoy-onepage.com/terms.html</guid>
-    <description>Terms of Service | Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</description>
-    <pubDate>Sun, 20 Sep 2026 22:08:43 +0900</pubDate>
-  </item>
-  <item>
-    <title>Privacy Policy | Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</title>
+    <title>Privacy Policy | Dog Walk Weather Checker</title>
     <link>https://us-dog-walk-weather.enjoy-onepage.com/privacy.html</link>
     <guid isPermaLink="true">https://us-dog-walk-weather.enjoy-onepage.com/privacy.html</guid>
-    <description>Privacy Policy | Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index</description>
-    <pubDate>Sun, 20 Sep 2026 22:08:43 +0900</pubDate>
+    <description>Privacy Policy for the Dog Walk Weather Checker.</description>
+    <pubDate>Tue, 29 Sep 2026 17:41:34 +0000</pubDate>
+  </item>
+  <item>
+    <title>Terms of Service | Dog Walk Weather Checker</title>
+    <link>https://us-dog-walk-weather.enjoy-onepage.com/terms.html</link>
+    <guid isPermaLink="true">https://us-dog-walk-weather.enjoy-onepage.com/terms.html</guid>
+    <description>Terms of Service for the Dog Walk Weather Checker.</description>
+    <pubDate>Tue, 29 Sep 2026 17:41:34 +0000</pubDate>
   </item>
 </channel>
 </rss>

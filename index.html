@@ -1,308 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/favicon.ico">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Dog Walk Weather & Pavement Heat Checker | Paw Safety Index</title>
-    <meta name="description" content="Check if outdoor temperature, pavement heat, and air quality are safe for your dog's paws before heading out.">
-    <link rel="canonical" href="https://us-dog-walk-weather.enjoy-onepage.com/">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Dog Walk Weather & Pavement Heat Checker | Paw Safety Index">
-    <meta property="og:description" content="Check if outdoor temperature, pavement heat, and air quality are safe for your dog's paws before heading out.">
-    <meta property="og:url" content="https://us-dog-walk-weather.enjoy-onepage.com/">
-    <meta property="og:site_name" content="Dog Walk & Pavement Heat Checker">
-    <meta property="og:image" content="https://us-dog-walk-weather.enjoy-onepage.com/og-image.png">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dog Walk Weather & Pavement Heat Checker | Paw Safety Index">
-    <meta name="twitter:description" content="Check if outdoor temperature, pavement heat, and air quality are safe for your dog's paws before heading out.">
-    <meta name="twitter:image" content="https://us-dog-walk-weather.enjoy-onepage.com/og-image.png">
-
-    <!-- Schema.org WebApplication -->
-    <script type="application/ld+json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dog Walk Weather Checker | Too Hot or Cold to Walk?</title>
+<meta name="description" content="Check if it is safe to walk your dog: heat index, wind chill, hot pavement estimate and air quality, adjusted for your dog's size, coat and health.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://us-dog-walk-weather.enjoy-onepage.com/">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dog Walk Weather Checker">
+<meta property="og:title" content="Dog Walk Weather Checker | Too Hot or Cold to Walk?">
+<meta property="og:description" content="Check if it is safe to walk your dog: heat index, wind chill, hot pavement estimate and air quality, adjusted for your dog's size, coat and health.">
+<meta property="og:url" content="https://us-dog-walk-weather.enjoy-onepage.com/">
+<meta property="og:image" content="https://us-dog-walk-weather.enjoy-onepage.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dog Walk Weather Checker | Too Hot or Cold to Walk?">
+<meta name="twitter:description" content="Check if it is safe to walk your dog: heat index, wind chill, hot pavement estimate and air quality, adjusted for your dog's size, coat and health.">
+<meta name="twitter:image" content="https://us-dog-walk-weather.enjoy-onepage.com/og-image.png">
+<link rel="alternate" type="application/rss+xml" title="Dog Walk Weather Checker RSS" href="https://us-dog-walk-weather.enjoy-onepage.com/rss.xml">
+<link rel="sitemap" type="application/xml" href="https://us-dog-walk-weather.enjoy-onepage.com/sitemap.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Dog Walk & Pavement Heat Checker",
+      "@id": "https://us-dog-walk-weather.enjoy-onepage.com/#webapp",
+      "name": "Dog Walk Weather Checker",
       "url": "https://us-dog-walk-weather.enjoy-onepage.com/",
-      "description": "Check if outdoor temperature, pavement heat, and air quality are safe for your dog's paws before heading out.",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "All",
-      "inLanguage": "en-US",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "inLanguage": "en",
+      "description": "A free checker that combines the National Weather Service heat index and wind chill, an estimate of pavement temperature in the sun and the EPA air quality index, adjusted for your dog's size, coat and health, to show whether it is a good time for a walk.",
+      "image": "https://us-dog-walk-weather.enjoy-onepage.com/og-image.png",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://us-dog-walk-weather.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "How hot is too hot to walk a dog?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on heat, humidity and your dog. Take extra care once the heat index reaches 80°F, and skip strenuous walks at 90°F and above for flat-faced, senior, overweight or thick-coated dogs. In direct sun the pavement can be far hotter than the air: about 125°F when the air is 77°F." } },
+        { "@type": "Question", "name": "How can I tell if the pavement is too hot?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Use the 7-second test: press the back of your hand on the pavement for 7 seconds. If it is too hot for you to hold, it is too hot for paw pads. Walk on grass or in shade, or go early in the morning or late in the evening." } },
+        { "@type": "Question", "name": "How cold is too cold for a walk?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Below 45°F some dogs start to feel the cold. Below 32°F, small, thin-coated, very young, old or unwell dogs are at risk, and below 20°F any dog can develop hypothermia or frostbite with long exposure. Wind makes it feel colder, so the checker uses the wind chill." } },
+        { "@type": "Question", "name": "Where does the weather come from?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You can type it in, or press Use my location to fill it from the National Weather Service hourly forecast, which covers US locations only. Your location is sent to the National Weather Service only when you press the button." } },
+        { "@type": "Question", "name": "Is this veterinary advice?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. It is general guidance. Heavy panting, drooling, stumbling, vomiting or collapse can be signs of heatstroke, and shivering, lifting paws or slowing down can mean it is too cold. Call your veterinarian or an emergency clinic right away if you are worried." } }
+      ]
     }
-    </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Layout Shield: Anti 390px Horizontal Overflow -->
-    <style id="layout-shield">
-        html, body {
-            max-width: 100% !important;
-            width: 100% !important;
-            overflow-x: hidden !important;
-        }
-        main, article, .container {
-            max-width: 100% !important;
-            box-sizing: border-box !important;
-        }
-        .manual-ad-box {
-            width: 100%;
-            max-width: 960px;
-            overflow: hidden;
-            margin: 12px auto;
-        }
-        .manual-ad-box ins {
-            max-width: 100% !important;
-            display: block;
-        }
-    </style>
-  <link rel="alternate" type="application/rss+xml" title="Dog Walk Weather &amp; Pavement Heat Checker | Paw Safety Index" href="https://us-dog-walk-weather.enjoy-onepage.com/rss.xml">
-  <link rel="sitemap" type="application/xml" href="https://us-dog-walk-weather.enjoy-onepage.com/sitemap.xml">
+  ]
+}
+</script>
+<!-- ADSENSE START: loader -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+<!-- ADSENSE END: loader -->
+<style>
+:root{--bg:#f3faf8;--card:#fff;--ink:#12302b;--muted:#5b6f6a;--accent:#0f766e;--accent-2:#ccfbf1;--line:#d9ebe6;--g:#15803d;--y:#b45309;--r:#b91c1c}
+*{box-sizing:border-box}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.header{background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;text-align:center;padding:26px 16px 22px}
+.header h1{margin:0;font-size:1.7rem}
+.header-sub{opacity:.92;margin-top:6px;font-size:.95rem}
+.wrap{max-width:1080px;margin:0 auto;padding:12px 14px 8px}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:1024px){.grid2{grid-template-columns:1fr 1fr;align-items:start}.result{position:sticky;top:12px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:14px 0}
+.grid2 .card{margin:0}
+.card h2{font-size:1.1rem;margin:0 0 10px}
+.card h3{font-size:1rem;margin:16px 0 8px}
+.lbl{display:block;font-weight:600;margin:10px 0 4px;font-size:.95rem}
+input[type=number],select{width:100%;font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chk{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:.95rem}
+.hint{font-size:.86rem;color:var(--muted);margin:6px 0}
+.btn{font:inherit;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:9px 14px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.err{color:var(--r);font-weight:600;margin:10px 0 0}
+.status-line{font-size:.88rem;color:var(--muted);margin:8px 0 0}
+.light{font-size:1.35rem;font-weight:800}
+.light.g{color:var(--g)}.light.y{color:var(--y)}.light.r{color:var(--r)}
+.sum{margin:4px 0 10px;color:var(--muted)}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{border-top:1px solid var(--line);padding:9px 0}
+.checks .k{font-weight:700}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.dot.g{background:var(--g)}.dot.y{background:#f59e0b}.dot.r{background:var(--r)}
+.checks .adv{display:block;font-size:.92rem;color:#35514b;margin-top:2px}
+.faq-item h3{font-size:1rem;margin:12px 0 4px}
+.faq-item p{margin:0;color:#35514b}
+.notice{border-color:#fcd34d;background:#fffbeb}
+.src{font-size:.85rem;color:var(--muted)}
+.ad-box{max-width:1080px;margin:10px auto;padding:0 14px;background:transparent;overflow:hidden;text-align:center}
+.ad-top ins{max-height:90px}
+.footer{text-align:center;font-size:.85rem;color:var(--muted);padding:18px 14px 28px}
+.footer a{color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#12302b;color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;max-width:90vw}
+.toast.show{opacity:1}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+<body>
+<header class="header">
+  <h1>Dog Walk Weather Checker</h1>
+  <div class="header-sub">Too hot, too cold or too smoky for a walk? · free, private, no sign-up</div>
+</header>
 
-    <!-- Header -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2 font-black text-slate-900 text-lg sm:text-xl tracking-tight">
-                <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center text-sm font-black shadow-sm">1P</span>
-                <span>Dog Walk & Pavement Heat Checker</span>
-            </a>
-            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                2026 US Edition
-            </span>
-        </div>
-    </header>
+<!-- ADSENSE START: top -->
+<div class="ad-box ad-top">
+  <ins class="adsbygoogle" style="display:block;height:60px;max-height:90px" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3824727725" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: top -->
 
-    <!-- Main Workspace -->
-    <main class="max-w-6xl mx-auto px-4 py-6 flex-grow w-full">
-        <!-- Title Banner -->
-        <div class="mb-8 text-center max-w-2xl mx-auto">
-            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-2">Dog Walk & Pavement Heat Checker</h1>
-            <p class="text-sm sm:text-base text-slate-600">Check if outdoor temperature, pavement heat, and air quality are safe for your dog's paws before heading out.</p>
-        </div>
-
-        <!-- 2-Column Gold Standard Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <!-- Left: Input Form (6 cols) -->
-            <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
-                <h2 class="text-base font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                    <span>Input Parameters</span>
-                </h2>
-                
-        <div class="space-y-4">
-            <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Primary Value / Amount ($)</label>
-                <div class="relative">
-                    <span class="absolute left-3 top-3 text-slate-400 font-bold">$</span>
-                    <input type="text" id="primaryVal" value="1,000" class="w-full pl-8 pr-4 py-3 bg-white border border-slate-300 rounded-xl font-semibold text-slate-800 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="1,000">
-                </div>
-            </div>
-            <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Secondary Parameter / Multiplier</label>
-                <input type="number" id="secVal" value="12" min="1" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl font-semibold text-slate-800 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            </div>
-            <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Calculation Category</label>
-                <select id="calcCat" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl font-semibold text-slate-800 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                    <option value="standard">Standard US Model (Benchmark)</option>
-                    <option value="conservative">Conservative Estimate (-10%)</option>
-                    <option value="growth">Accelerated Target (+15%)</option>
-                </select>
-            </div>
-        </div>
-        
-                <button type="button" onclick="calculate()" class="mt-6 w-full py-3.5 bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-black text-base rounded-xl shadow-md transition duration-150 cursor-pointer whitespace-nowrap">
-                    Calculate Now
-                </button>
-            </div>
-
-            <!-- Right: Results Card (6 cols sticky) -->
-            <div class="lg:col-span-6 lg:sticky lg:top-24">
-                <div id="resultCard" class="hidden">
-                    
-        <div class="bg-blue-600 text-white p-6 rounded-2xl shadow-md mb-6">
-            <p class="text-xs uppercase font-bold tracking-wider opacity-90 mb-1">Estimated Annual Result</p>
-            <h3 id="resPrimary" class="text-3xl sm:text-4xl font-black tracking-tight">$0</h3>
-            <p class="text-xs mt-2 opacity-80">Calculated under standard US benchmarking formulas</p>
-        </div>
-        <div class="space-y-3 text-sm text-slate-700 bg-white p-5 rounded-2xl border border-slate-200">
-            <div class="flex justify-between pb-2 border-b border-slate-100">
-                <span class="text-slate-500">Monthly Equivalent:</span>
-                <span id="resMonthly" class="font-bold text-slate-900">$0</span>
-            </div>
-            <div class="flex justify-between pt-1">
-                <span class="font-bold text-slate-900">Growth / Variance Index:</span>
-                <span id="resBenchmark" class="font-black text-blue-600">0%</span>
-            </div>
-        </div>
-        
-                    <div class="mt-4 flex gap-3">
-                        <button type="button" onclick="copyResults()" class="flex-1 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl transition shadow-sm cursor-pointer whitespace-nowrap">
-                            Copy Results
-                        </button>
-                        <button type="button" onclick="resetForm()" class="px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm rounded-xl transition cursor-pointer whitespace-nowrap">
-                            Reset
-                        </button>
-                    </div>
-                </div>
-                <!-- Initial Placeholder -->
-                <div id="placeholderCard" class="p-8 text-center border-2 border-dashed border-slate-200 rounded-2xl text-slate-400">
-                    <p class="text-sm font-semibold">Enter your inputs on the left and click "Calculate Now" to view full projections.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- E-E-A-T Editorial FAQ Accordion -->
-        <section class="mt-14 max-w-3xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 mb-4">Frequently Asked Questions</h2>
-            <div class="space-y-3">
-                
-    <!-- In-Depth Guidebook CTA Banner (4-1-4 Compliance) -->
-    <div class="mt-8 mb-8 p-6 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-2xl border border-indigo-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <span class="inline-block px-3 py-1 bg-indigo-600 text-white text-xs font-bold rounded-full mb-2">COMPLETE 2026 HANDBOOK</span>
-        <h3 class="text-lg font-bold text-gray-900">Want to master the statutory details? Read our in-depth guide</h3>
-        <p class="text-xs text-gray-600 mt-1">Explore official calculation formulas, edge-case exemptions, and strategic checklists.</p>
+<main class="wrap">
+  <div class="grid2">
+    <section class="card" aria-labelledby="in-h">
+      <h2 id="in-h">1. Weather right now</h2>
+      <button type="button" class="btn primary" id="btn-loc">📍 Use my location (NWS forecast)</button>
+      <p class="status-line" id="loc-status">US locations only. Or type the weather below.</p>
+      <div class="row2">
+        <div><label class="lbl" for="t">Air temperature (°F)</label><input id="t" type="number" inputmode="decimal" step="1" placeholder="e.g. 78"></div>
+        <div><label class="lbl" for="rh">Humidity (%) <span class="hint">optional</span></label><input id="rh" type="number" inputmode="decimal" step="1" placeholder="e.g. 60"></div>
       </div>
-      <a href="/guides/guide.html" class="whitespace-nowrap px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 text-xs shrink-0">
-        Read In-Depth Guide &rarr;
-      </a>
-    </div>
+      <div class="row2">
+        <div><label class="lbl" for="w">Wind (mph) <span class="hint">optional</span></label><input id="w" type="number" inputmode="decimal" step="1" placeholder="e.g. 10"></div>
+        <div><label class="lbl" for="aqi">Air quality index <span class="hint">optional</span></label><input id="aqi" type="number" inputmode="numeric" step="1" placeholder="e.g. 42"></div>
+      </div>
+      <label class="lbl" for="sky">Sun on the pavement</label>
+      <select id="sky">
+        <option value="sun">Full sun</option>
+        <option value="partly">Partly sunny</option>
+        <option value="cloudy" selected>Cloudy or shade</option>
+        <option value="night">Night</option>
+      </select>
+      <label class="chk"><input type="checkbox" id="wet"> Rain, sleet or snow right now</label>
+      <p class="hint">Air quality index: see AirNow.gov or your weather app. Leave blank to skip that check.</p>
 
-    <details class="group border border-slate-200 rounded-xl p-4 transition">
-                    <summary class="font-bold text-slate-800 text-sm cursor-pointer flex justify-between items-center select-none">
-                        <span>How accurate are these calculations?</span>
-                        <span class="text-blue-600 font-bold group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Calculations use 2026 statutory formulas and verified standard economic models. While highly accurate for benchmarking, always consult a certified professional for individual legal or financial filings.
-                    </p>
-                </details>
-                <details class="group border border-slate-200 rounded-xl p-4 transition">
-                    <summary class="font-bold text-slate-800 text-sm cursor-pointer flex justify-between items-center select-none">
-                        <span>Is my personal or financial data stored?</span>
-                        <span class="text-blue-600 font-bold group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        No. 100% of the computations occur locally in your browser's JavaScript engine. Zero personal or financial data is transmitted to or saved on external servers.
-                    </p>
-                </details>
-                <details class="group border border-slate-200 rounded-xl p-4 transition">
-                    <summary class="font-bold text-slate-800 text-sm cursor-pointer flex justify-between items-center select-none">
-                        <span>Can I export or share my calculation results?</span>
-                        <span class="text-blue-600 font-bold group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Yes! Click the "Copy Results" button to copy a formatted summary with a link directly to your clipboard for sharing via Slack, email, or messaging apps.
-                    </p>
-                </details>
-            </div>
-        </section>
-    </main>
+      <h3>2. Your dog</h3>
+      <div class="row2">
+        <div><label class="lbl" for="size">Size</label>
+          <select id="size"><option value="s">Toy or small (under 20 lb)</option><option value="m" selected>Medium (20 to 50 lb)</option><option value="l">Large (over 50 lb)</option></select></div>
+        <div><label class="lbl" for="coat">Coat</label>
+          <select id="coat"><option value="thin">Thin or short</option><option value="avg" selected>Average</option><option value="thick">Thick or double</option></select></div>
+      </div>
+      <label class="chk"><input type="checkbox" id="rf-flat"> Flat-faced breed (pug, bulldog, boxer...)</label>
+      <label class="chk"><input type="checkbox" id="rf-senior"> Senior or puppy</label>
+      <label class="chk"><input type="checkbox" id="rf-over"> Overweight</label>
+      <label class="chk"><input type="checkbox" id="rf-heart"> Heart or breathing condition</label>
+      <p class="err" id="err" role="alert" hidden></p>
+    </section>
 
-    <!-- Floating Toast Notification -->
-    <div id="toastNotification" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-5 py-2.5 rounded-full text-xs font-bold shadow-2xl opacity-0 pointer-events-none transition-opacity duration-200 z-50">
-        Copied to clipboard!
-    </div>
+    <section class="card result" aria-labelledby="out-h" aria-live="polite">
+      <h2 id="out-h">3. Walk check</h2>
+      <div class="light" id="out-light">Enter the air temperature to start.</div>
+      <div class="sum" id="out-sum"></div>
+      <ul class="checks" id="out-checks"></ul>
+      <div class="actions">
+        <button type="button" class="btn primary" id="btn-copy" disabled>📋 Copy result</button>
+        <button type="button" class="btn" id="btn-share" disabled>📤 Share link</button>
+      </div>
+    </section>
+  </div>
 
-    <!-- Modern Trust Footer -->
-    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500 mt-12">
-        <div class="max-w-6xl mx-auto px-4 space-y-3">
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 font-semibold text-slate-600">
-                <a href="/terms.html" class="hover:text-blue-600 transition">Terms of Service</a>
-                <span class="text-slate-300">|</span>
-                <a href="/privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a>
-                <span class="text-slate-300">|</span>
-                <a href="/disclaimer.html" class="hover:text-blue-600 transition">Disclaimer</a>
-            </div>
-            <p class="max-w-xl mx-auto text-slate-400">
-                This tool is provided for educational and estimation purposes only. All calculations run client-side.
-            </p>
-            <p>&copy; 2026 Dog Walk & Pavement Heat Checker. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- ADSENSE START: mid (right after the result card) -->
+<div class="ad-box ad-mid">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="1186914926" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: mid -->
 
-    <!-- Logic Script -->
-    <script>
-        
-        function calculate() {
-            const prim = parseFloat(document.getElementById('primaryVal').value.replace(/,/g, '')) || 0;
-            const sec = parseFloat(document.getElementById('secVal').value) || 1;
-            const cat = document.getElementById('calcCat').value;
-            
-            let mult = 1.0;
-            if (cat === 'conservative') mult = 0.90;
-            if (cat === 'growth') mult = 1.15;
-            
-            const total = prim * sec * mult;
-            const monthly = total / 12;
-            const rate = ((total / (prim || 1)) * 10).toFixed(1);
-            
-            document.getElementById('resPrimary').textContent = '$' + Math.round(total).toLocaleString('en-US');
-            document.getElementById('resMonthly').textContent = '$' + Math.round(monthly).toLocaleString('en-US');
-            document.getElementById('resBenchmark').textContent = rate + '%';
-            
-            document.getElementById('resultCard').classList.remove('hidden');
-        }
-        
+  <section class="card" aria-labelledby="how-h">
+    <h2 id="how-h">🧮 How the checker works</h2>
+    <p>The overall light is the worst of four separate checks, so one serious risk is never hidden by good numbers elsewhere.</p>
+    <ul>
+      <li><strong>Pavement:</strong> in direct sun, asphalt can reach about 125°F when the air is 77°F and about 143°F at 87°F (figures published by the Vets Now emergency veterinary service). The checker draws a straight line through those two points to estimate the pavement in full sun and uses half of that extra heat for partly sunny skies. Skin can be damaged in about a minute at 125°F, so 125°F and above is red and 115°F to 124°F is yellow. It is an estimate: dark asphalt, time of day and surface type all change the real number.</li>
+      <li><strong>Heat:</strong> when you add humidity, the checker uses the National Weather Service heat index formula (the Rothfusz regression with its official adjustments). The NWS calls 80°F to 90°F Caution, 90°F to 103°F Extreme Caution and 103°F and above Danger. Dogs cool themselves less well than people, so 80°F and above is yellow, 90°F and above is red for dogs with a risk factor (flat face, senior or puppy, overweight, heart or breathing condition, thick coat) and 103°F and above is red for every dog. Flat-faced dogs get a yellow from 75°F.</li>
+      <li><strong>Cold:</strong> the checker uses the National Weather Service wind chill (defined at 50°F or colder with wind above 3 mph). Veterinary guidance says some dogs feel the cold below 45°F, small, thin-coated, very young, old or unwell dogs are at risk below 32°F, and any dog can get hypothermia or frostbite below 20°F. Following the Tufts Animal Care and Condition scale notes, a thick or double coat relaxes the result by one level, and rain, sleet or snow makes it one level stricter.</li>
+      <li><strong>Air quality:</strong> the EPA air quality index categories: 0 to 50 Good, 51 to 100 Moderate, 101 to 150 Unhealthy for Sensitive Groups, 151 and above Unhealthy or worse. Senior dogs, puppies, flat-faced dogs and dogs with heart or breathing conditions are treated as sensitive.</li>
+    </ul>
+    <p class="src">Sources: National Weather Service heat index equation and wind chill formula; Vets Now, hot pavements; PetMD cold-weather guidance; Tufts Animal Care and Condition scales; EPA AirNow AQI basics. Checked September 30, 2026.</p>
+  </section>
 
-        function copyResults() {
-            const resCard = document.getElementById('resultCard');
-            const lines = [];
-            lines.push("Dog Walk & Pavement Heat Checker - Calculation Summary");
-            lines.push("=============================");
-            resCard.querySelectorAll('.flex.justify-between').forEach(el => {
-                const k = el.querySelector('span:first-child')?.innerText || '';
-                const v = el.querySelector('span:last-child')?.innerText || '';
-                if (k && v) lines.push(k + ' ' + v);
-            });
-            lines.push("-----------------------------");
-            lines.push("👉 Try it here: https://us-dog-walk-weather.enjoy-onepage.com/");
-            
-            const textToCopy = lines.join('\n');
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(textToCopy).then(() => showToast());
-            } else {
-                const ta = document.createElement('textarea');
-                ta.value = textToCopy;
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand('copy');
-                document.body.removeChild(ta);
-                showToast();
-            }
-        }
+  <section class="card" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">❓ Frequently asked questions</h2>
+    <div class="faq-item"><h3>How hot is too hot to walk a dog?</h3><p>It depends on heat, humidity and your dog. Take extra care once the heat index reaches 80°F, and skip strenuous walks at 90°F and above for flat-faced, senior, overweight or thick-coated dogs. In direct sun the pavement can be far hotter than the air: about 125°F when the air is 77°F.</p></div>
+    <div class="faq-item"><h3>How can I tell if the pavement is too hot?</h3><p>Use the 7-second test: press the back of your hand on the pavement for 7 seconds. If it is too hot for you to hold, it is too hot for paw pads. Walk on grass or in shade, or go early in the morning or late in the evening.</p></div>
+    <div class="faq-item"><h3>How cold is too cold for a walk?</h3><p>Below 45°F some dogs start to feel the cold. Below 32°F, small, thin-coated, very young, old or unwell dogs are at risk, and below 20°F any dog can develop hypothermia or frostbite with long exposure. Wind makes it feel colder, so the checker uses the wind chill.</p></div>
+    <div class="faq-item"><h3>Where does the weather come from?</h3><p>You can type it in, or press Use my location to fill it from the National Weather Service hourly forecast, which covers US locations only. Your location is sent to the National Weather Service only when you press the button.</p></div>
+    <div class="faq-item"><h3>Is this veterinary advice?</h3><p>No. It is general guidance. Heavy panting, drooling, stumbling, vomiting or collapse can be signs of heatstroke, and shivering, lifting paws or slowing down can mean it is too cold. Call your veterinarian or an emergency clinic right away if you are worried.</p></div>
+  </section>
 
-        function showToast() {
-            const t = document.getElementById('toastNotification');
-            t.classList.remove('opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                t.classList.add('opacity-0', 'pointer-events-none');
-            }, 2200);
-        }
+  <section class="card notice" aria-labelledby="note-h">
+    <h2 id="note-h">⚠️ Please note</h2>
+    <p>This checker is general guidance, not veterinary advice. Every dog is different, so watch yours closely. If you see heavy panting, drooling, stumbling, vomiting or collapse, move your dog to shade, offer water and call a veterinarian or emergency clinic right away.</p>
+  </section>
+</main>
 
-        function resetForm() {
-            document.getElementById('resultCard').classList.add('hidden');
-            document.getElementById('placeholderCard').classList.remove('hidden');
-        }
+<!-- ADSENSE START: bottom -->
+<div class="ad-box ad-bottom">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3416334507" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: bottom -->
 
-        // Auto calculate on load
-        window.addEventListener('DOMContentLoaded', () => {
-            calculate();
-            document.getElementById('placeholderCard').classList.add('hidden');
-        });
-    </script>
+<footer class="footer">
+  <p>A free dog walk weather checker. Calculations run on your device; your location goes only to the National Weather Service, and only when you ask.</p>
+  <p><a href="/disclaimer.html">Disclaimer</a> | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+</footer>
+
+<div id="global-ux-toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- LOGIC START -->
+<script>
+(function () {
+  'use strict';
+  var SITE = 'https://us-dog-walk-weather.enjoy-onepage.com';
+  var TOOL_NAME = 'Dog Walk Weather Checker';
+  var STORE = 'dogwalk.profile.v1';
+  var NWS = 'https://api.weather.gov';
+  var RF = ['flat', 'senior', 'over', 'heart'];
+  var RF_LABEL = { flat: 'flat-faced', senior: 'senior or puppy', over: 'overweight', heart: 'heart or breathing condition' };
+  var SIZE_LABEL = { s: 'toy or small', m: 'medium', l: 'large' };
+  var COAT_LABEL = { thin: 'thin coat', avg: 'average coat', thick: 'thick coat' };
+  var SKY = ['sun', 'partly', 'cloudy', 'night'];
+  var LV = ['g', 'y', 'r'];
+
+  function $(id) { return document.getElementById(id); }
+  function on(id, ev, fn) { var el = $(id); if (el) el.addEventListener(ev, fn); }
+  function val(id) { var el = $(id); return el ? String(el.value).trim() : ''; }
+  function num(id) { var v = val(id); if (v === '') return null; var n = Number(v); return isFinite(n) ? n : NaN; }
+  function checked(id) { var el = $(id); return !!(el && el.checked); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  /* National Weather Service heat index (wpc.ncep.noaa.gov/html/heatindex_equation.shtml) */
+  function heatIndex(T, RH) {
+    var hi = 0.5 * (T + 61.0 + (T - 68.0) * 1.2 + RH * 0.094);
+    if (hi < 80) return hi;
+    hi = -42.379 + 2.04901523 * T + 10.14333127 * RH - 0.22475541 * T * RH - 0.00683783 * T * T - 0.05481717 * RH * RH +
+         0.00122874 * T * T * RH + 0.00085282 * T * RH * RH - 0.00000199 * T * T * RH * RH;
+    if (RH < 13 && T >= 80 && T <= 112) hi -= ((13 - RH) / 4) * Math.sqrt((17 - Math.abs(T - 95)) / 17);
+    else if (RH > 85 && T >= 80 && T <= 87) hi += ((RH - 85) / 10) * ((87 - T) / 5);
+    return hi;
+  }
+  /* National Weather Service wind chill (defined for T <= 50F and wind > 3 mph) */
+  function windChill(T, V) {
+    if (T > 50 || !(V > 3)) return T;
+    var p = Math.pow(V, 0.16);
+    return 35.74 + 0.6215 * T - 35.75 * p + 0.4275 * T * p;
+  }
+  /* Pavement in direct sun: line through the published points 77F -> 125F and 87F -> 143F */
+  function pavement(T, sky) {
+    var sun = Math.max(T, 125 + 1.8 * (T - 77));
+    if (sky === 'sun') return sun;
+    if (sky === 'partly') return T + 0.5 * (sun - T);
+    return T;
+  }
+  function lvlPavement(P) { return P >= 125 ? 2 : (P >= 115 ? 1 : 0); }
+  function lvlHeat(H, risk, flat) {
+    if (H >= 103) return 2;
+    if (H >= 90) return risk ? 2 : 1;
+    if (H >= 80) return 1;
+    return (H >= 75 && flat) ? 1 : 0;
+  }
+  function lvlCold(F, vulnerable, thick, wet) {
+    var l = vulnerable ? (F >= 45 ? 0 : (F >= 32 ? 1 : 2)) : (F >= 32 ? 0 : (F >= 20 ? 1 : 2));
+    if (thick) l = Math.max(0, l - 1);
+    if (wet && F < 45) l = Math.min(2, l + 1);
+    if (F < 20) l = Math.max(l, 1);
+    return l;
+  }
+  function aqiCat(A) { return A <= 50 ? 'Good' : A <= 100 ? 'Moderate' : A <= 150 ? 'Unhealthy for Sensitive Groups' : A <= 200 ? 'Unhealthy' : A <= 300 ? 'Very Unhealthy' : 'Hazardous'; }
+  function lvlAqi(A, sensitive) { return A >= 151 ? 2 : (A >= 101 ? (sensitive ? 2 : 1) : (A >= 51 ? (sensitive ? 1 : 0) : 0)); }
+
+  var ADV = {
+    pave: ['Pavement should be comfortable for paws.',
+           'Close to burn level. Do the 7-second test with the back of your hand before walking on it.',
+           'Hot enough to burn paw pads in about a minute. Stick to grass or shade, go early or late, or use booties.'],
+    heat: ['No heat concern.',
+           'Keep it short and slow, bring water, choose shade and avoid midday.',
+           'High heatstroke risk. Skip the walk or keep it to a few minutes in shade.'],
+    cold: ['No cold concern.',
+           'Take a shorter walk. A coat helps small or thin-coated dogs; wipe paws after salted sidewalks.',
+           'Risk of hypothermia and frostbite. Keep outings to a few minutes; a coat and booties help.'],
+    aqi: ['Air quality is fine for a walk.',
+          'Limit hard exercise outdoors, especially for dogs with heart or breathing problems.',
+          'Unhealthy air for your dog. Keep outdoor time short and skip exercise.']
+  };
+  var HEAD = [['🟢 Good to walk', 'Conditions look fine for a normal walk. Bring water and keep an eye on your dog.'],
+              ['🟡 Walk with care', 'A shorter, slower walk is best. See the checks below.'],
+              ['🔴 Skip it or keep it very short', 'Try a quick potty break and play indoors instead.']];
+
+  function readInputs() {
+    var rf = {};
+    RF.forEach(function (k) { rf[k] = checked('rf-' + k); });
+    return { T: num('t'), RH: num('rh'), W: num('w'), AQI: num('aqi'), sky: SKY.indexOf(val('sky')) >= 0 ? val('sky') : 'cloudy',
+             wet: checked('wet'), size: val('size') || 'm', coat: val('coat') || 'avg', rf: rf };
+  }
+  function validate(x) {
+    if (x.T === null) return 'Enter the air temperature in °F.';
+    if (isNaN(x.T) || x.T < -40 || x.T > 130) return 'Air temperature should be between -40°F and 130°F.';
+    if (x.RH !== null && (isNaN(x.RH) || x.RH < 0 || x.RH > 100)) return 'Humidity should be between 0 and 100%.';
+    if (x.W !== null && (isNaN(x.W) || x.W < 0 || x.W > 150)) return 'Wind speed should be between 0 and 150 mph.';
+    if (x.AQI !== null && (isNaN(x.AQI) || x.AQI < 0 || x.AQI > 999)) return 'Air quality index should be between 0 and 999.';
+    return '';
+  }
+  function evaluate(x) {
+    var risk = x.rf.flat || x.rf.senior || x.rf.over || x.rf.heart || x.coat === 'thick';
+    var vulnerable = x.size === 's' || x.coat === 'thin' || x.rf.senior || x.rf.heart;
+    var sensitive = x.rf.senior || x.rf.heart || x.rf.flat;
+    var checks = [];
+    if (x.sky === 'sun' || x.sky === 'partly') {
+      var P = pavement(x.T, x.sky);
+      checks.push({ key: 'pave', name: 'Pavement', value: 'about ' + Math.round(P) + '°F in the ' + (x.sky === 'sun' ? 'sun' : 'partly sunny weather'), lvl: lvlPavement(P) });
+    } else {
+      checks.push({ key: 'pave', name: 'Pavement', value: 'no direct sun, close to the air temperature', lvl: 0 });
+    }
+    var H = x.RH !== null ? heatIndex(x.T, x.RH) : x.T;
+    checks.push({ key: 'heat', name: 'Heat', value: (x.RH !== null ? 'heat index ' : 'air temperature ') + Math.round(H) + '°F' +
+                  (x.RH === null && x.T >= 75 ? ' (add humidity for the heat index)' : ''), lvl: lvlHeat(H, risk, x.rf.flat) });
+    var F = x.W !== null ? windChill(x.T, x.W) : x.T;
+    var wc = x.W !== null && x.T <= 50 && x.W > 3;
+    checks.push({ key: 'cold', name: 'Cold', value: (wc ? 'feels like ' : 'air temperature ') + Math.round(F) + '°F' + (wc ? ' with the wind' : ''),
+                  lvl: lvlCold(F, vulnerable, x.coat === 'thick', x.wet) });
+    if (x.AQI !== null) {
+      checks.push({ key: 'aqi', name: 'Air quality', value: 'AQI ' + Math.round(x.AQI) + ' (' + aqiCat(x.AQI) + ')', lvl: lvlAqi(x.AQI, sensitive) });
+    }
+    var worst = checks.reduce(function (m, c) { return Math.max(m, c.lvl); }, 0);
+    return { checks: checks, worst: worst };
+  }
+
+  var last = null;
+  function setErr(m) { var e = $('err'); if (e) { e.textContent = m || ''; e.hidden = !m; } }
+  function clearOut(msg) {
+    last = null;
+    var l = $('out-light'); if (l) { l.className = 'light'; l.textContent = msg || 'Enter the air temperature to start.'; }
+    var s = $('out-sum'); if (s) s.textContent = '';
+    var c = $('out-checks'); if (c) c.innerHTML = '';
+    ['btn-copy', 'btn-share'].forEach(function (id) { var b = $(id); if (b) b.disabled = true; });
+  }
+  function params(x) {
+    var q = new URLSearchParams();
+    if (x.T !== null) q.set('t', x.T);
+    if (x.RH !== null) q.set('rh', x.RH);
+    if (x.W !== null) q.set('w', x.W);
+    if (x.AQI !== null) q.set('aqi', x.AQI);
+    q.set('sky', x.sky); if (x.wet) q.set('wet', '1');
+    q.set('size', x.size); q.set('coat', x.coat);
+    var rf = RF.filter(function (k) { return x.rf[k]; }); if (rf.length) q.set('rf', rf.join(','));
+    return q.toString();
+  }
+  function link() { return last ? SITE + '/?' + params(last.x) : SITE + '/'; }
+  function saveProfile(x) { try { localStorage.setItem(STORE, JSON.stringify({ size: x.size, coat: x.coat, rf: x.rf })); } catch (e) { /* storage unavailable */ } }
+
+  function render() {
+    var x = readInputs();
+    saveProfile(x);
+    var msg = validate(x);
+    if (msg) { setErr(x.T === null ? '' : msg); clearOut(x.T === null ? '' : 'Please fix the value above.'); return; }
+    setErr('');
+    var r = evaluate(x);
+    var l = $('out-light'); if (l) { l.className = 'light ' + LV[r.worst]; l.textContent = HEAD[r.worst][0]; }
+    var s = $('out-sum'); if (s) s.textContent = HEAD[r.worst][1];
+    var c = $('out-checks');
+    if (c) c.innerHTML = r.checks.map(function (k) {
+      return '<li data-check="' + k.key + '" data-level="' + k.lvl + '"><span class="dot ' + LV[k.lvl] + '"></span><span class="k">' + esc(k.name) +
+             ':</span> ' + esc(k.value) + '<span class="adv">' + esc(ADV[k.key][k.lvl]) + '</span></li>';
+    }).join('');
+    last = { x: x, r: r };
+    ['btn-copy', 'btn-share'].forEach(function (id) { var b = $(id); if (b) b.disabled = false; });
+    try { history.replaceState(null, '', location.pathname + '?' + params(x)); } catch (e) { /* e.g. opened from a file */ }
+  }
+
+  /* ---------- toast · copy · share (standard: Web Share -> clipboard -> honest message on failure) ---------- */
+  var toastTimer = null;
+  function showToastNotification(m) {
+    var el = $('global-ux-toast'); if (!el) return;
+    el.textContent = m; el.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2200);
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    showToastNotification(ok ? 'Copied! Paste it anywhere to share.' : 'Could not copy. Please copy the link from the address bar.');
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { showToastNotification('Copied! Paste it anywhere to share.'); }, function () { fallbackCopy(text); });
+    } else { fallbackCopy(text); }
+  }
+  function summary() {
+    if (!last) return '';
+    var x = last.x, lines = last.r.checks.map(function (k) { return '• ' + k.name + ': ' + k.value; }).join('\n');
+    var rf = RF.filter(function (k) { return x.rf[k]; }).map(function (k) { return RF_LABEL[k]; });
+    return `🐕 Dog walk check: ${HEAD[last.r.worst][0]}
+${lines}
+Dog: ${SIZE_LABEL[x.size] || x.size}, ${COAT_LABEL[x.coat] || x.coat}${rf.length ? ', ' + rf.join(', ') : ''}
+👉 ${TOOL_NAME}: ${link()}`;
+  }
+
+  /* ---------- National Weather Service hourly forecast (US only, only when the user asks) ---------- */
+  function setLoc(m) { var el = $('loc-status'); if (el) el.textContent = m; }
+  function skyFrom(p) {
+    var s = String(p.shortForecast || '');
+    if (!p.isDaytime) return 'night';
+    if (/rain|shower|drizzle|thunder|snow|sleet|freezing|fog|haze|smoke/i.test(s)) return 'cloudy';
+    if (/mostly cloudy/i.test(s)) return 'cloudy';
+    if (/partly/i.test(s)) return 'partly';
+    if (/sunny|clear/i.test(s)) return 'sun';
+    return 'cloudy';
+  }
+  function wetFrom(p) { var s = String(p.shortForecast || ''); return /rain|shower|drizzle|snow|sleet|freezing/i.test(s) && !/chance/i.test(s); }
+  function getJSON(url) {
+    return fetch(url, { headers: { 'Accept': 'application/geo+json' } }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    });
+  }
+  function fillFrom(p, place) {
+    var T = Number(p.temperature);
+    if (String(p.temperatureUnit).toUpperCase() === 'C') T = T * 9 / 5 + 32;
+    if (!isFinite(T)) throw new Error('no temperature');
+    var set = function (id, v) { var el = $(id); if (el) el.value = v; };
+    set('t', Math.round(T));
+    var rh = p.relativeHumidity && p.relativeHumidity.value;
+    set('rh', (rh === 0 || rh) ? Math.round(rh) : '');
+    var w = String(p.windSpeed || '').match(/\d+/g);
+    set('w', w ? Math.max.apply(null, w.map(Number)) : '');
+    set('sky', skyFrom(p));
+    var wet = $('wet'); if (wet) wet.checked = wetFrom(p);
+    var when = '';
+    try { when = new Date(p.startTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }); } catch (e) { when = ''; }
+    setLoc('Filled from the National Weather Service hourly forecast' + (place ? ' for ' + place : '') + ': ' +
+           (p.shortForecast || '') + (when ? ' (' + when + ')' : '') + '. Adjust anything that looks off.');
+    render();
+  }
+  on('btn-loc', 'click', function () {
+    if (!navigator.geolocation) { setLoc('Location is not available in this browser. Type the weather below.'); return; }
+    setLoc('Finding your location…');
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      var lat = pos.coords.latitude.toFixed(4), lon = pos.coords.longitude.toFixed(4), place = '';
+      setLoc('Getting the National Weather Service forecast…');
+      getJSON(NWS + '/points/' + lat + ',' + lon).then(function (j) {
+        var pr = j && j.properties;
+        if (!pr || !pr.forecastHourly) throw new Error('no forecast');
+        var rl = pr.relativeLocation && pr.relativeLocation.properties;
+        place = rl ? [rl.city, rl.state].filter(Boolean).join(', ') : '';
+        return getJSON(pr.forecastHourly);
+      }).then(function (f) {
+        var p = f && f.properties && f.properties.periods && f.properties.periods[0];
+        if (!p) throw new Error('no periods');
+        fillFrom(p, place);
+      }).catch(function () {
+        setLoc('Could not get a National Weather Service forecast here. It covers US locations only. You can still type the weather below.');
+      });
+    }, function () {
+      setLoc('Location permission was not given. Type the weather below.');
+    }, { timeout: 10000, maximumAge: 600000 });
+  });
+
+  ['t', 'rh', 'w', 'aqi'].forEach(function (id) { on(id, 'input', render); });
+  ['sky', 'wet', 'size', 'coat', 'rf-flat', 'rf-senior', 'rf-over', 'rf-heart'].forEach(function (id) { on(id, 'change', render); });
+  on('btn-copy', 'click', function () { if (last) copyText(summary()); });
+  on('btn-share', 'click', function () {
+    if (!last) return;
+    var text = summary();
+    if (navigator.share) { navigator.share({ title: TOOL_NAME, text: text, url: link() }).catch(function (e) { if (!e || e.name !== 'AbortError') copyText(text); }); }
+    else { copyText(text); }
+  });
+
+  /* ---------- start: URL parameters -> saved dog profile -> defaults ---------- */
+  (function init() {
+    var q; try { q = new URLSearchParams(location.search); } catch (e) { q = null; }
+    var set = function (id, v) { var el = $(id); if (el && v !== null && v !== undefined) el.value = v; };
+    var saved = null; try { saved = JSON.parse(localStorage.getItem(STORE) || 'null'); } catch (e) { saved = null; }
+    if (saved && typeof saved === 'object') {
+      if (SIZE_LABEL[saved.size]) set('size', saved.size);
+      if (COAT_LABEL[saved.coat]) set('coat', saved.coat);
+      if (saved.rf) RF.forEach(function (k) { var el = $('rf-' + k); if (el) el.checked = !!saved.rf[k]; });
+    }
+    if (q && q.toString()) {
+      ['t', 'rh', 'w', 'aqi'].forEach(function (k) { if (q.has(k)) set(k, q.get(k)); });
+      if (SKY.indexOf(q.get('sky')) >= 0) set('sky', q.get('sky'));
+      var wet = $('wet'); if (wet) wet.checked = q.get('wet') === '1';
+      if (SIZE_LABEL[q.get('size')]) set('size', q.get('size'));
+      if (COAT_LABEL[q.get('coat')]) set('coat', q.get('coat'));
+      if (q.has('rf')) { var list = (q.get('rf') || '').split(','); RF.forEach(function (k) { var el = $('rf-' + k); if (el) el.checked = list.indexOf(k) >= 0; }); }
+    }
+    render();
+  })();
+})();
+</script>
+<!-- LOGIC END -->
 </body>
 </html>
